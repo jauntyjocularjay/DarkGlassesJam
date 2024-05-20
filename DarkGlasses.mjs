@@ -77,7 +77,7 @@ const css = {
         mood7: 'mood7',
         mood8: 'mood8',
         mood9: 'mood9',
-        card: 'card',
+        emboss: 'emboss',
     },
     id: {
 

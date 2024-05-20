@@ -48,10 +48,15 @@
     color: #000000;
 }
 
-.card {
+.emboss {
     border-radius: 16px;
     padding: 2px 16px 4px 16px;
-    margin: 4px;
+    margin: 16px auto;
     box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
 }
 
+@media screen and (width > 544px) {
+    .emboss {
+        width: 512px;
+    }
+}

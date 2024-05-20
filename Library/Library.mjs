@@ -86,16 +86,16 @@ class DivSample {
 const elements = {}
 
 const moodCards = [
-    [css.class.mood0, css.class.card],
-    [css.class.mood1, css.class.card],
-    [css.class.mood2, css.class.card],
-    [css.class.mood3, css.class.card],
-    [css.class.mood4, css.class.card],
-    [css.class.mood5, css.class.card],
-    [css.class.mood6, css.class.card],
-    [css.class.mood7, css.class.card],
-    [css.class.mood8, css.class.card],
-    [css.class.mood9, css.class.card],
+    [css.class.mood0, css.class.emboss],
+    [css.class.mood1, css.class.emboss],
+    [css.class.mood2, css.class.emboss],
+    [css.class.mood3, css.class.emboss],
+    [css.class.mood4, css.class.emboss],
+    [css.class.mood5, css.class.emboss],
+    [css.class.mood6, css.class.emboss],
+    [css.class.mood7, css.class.emboss],
+    [css.class.mood8, css.class.emboss],
+    [css.class.mood9, css.class.emboss],
 ]
 
 let i = 0
