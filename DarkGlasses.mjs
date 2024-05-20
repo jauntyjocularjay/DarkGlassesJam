@@ -6,7 +6,7 @@ import {
     unit,
 
     // Base Classes
-    OptionSelection as Selection,
+    Selection,
     StyleSheet,
     Listener,
     ListenerOnLoad,
@@ -65,3 +65,22 @@ import {
     PercentageOutOfRangeError
 } from './vjsc/vanilla.mjs'
 
+const css = {
+    classes: {
+        mood0: 'mood0',
+        mood1: 'mood1',
+        mood2: 'mood2',
+        mood3: 'mood3',
+        mood4: 'mood4',
+        mood5: 'mood5',
+        mood6: 'mood6',
+        mood7: 'mood7',
+        mood8: 'mood8',
+        mood9: 'mood9',
+        card: 'card',
+    }
+}
+
+export {
+    css
+}
