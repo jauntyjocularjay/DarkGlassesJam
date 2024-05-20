@@ -1,0 +1,25 @@
+{
+  "name": "darkglasses",
+  "version": "0.0.1",
+  "description": "A visual novel about depression",
+  "main": "DarkGlasses.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jauntyjocularjay/DarkGlassesJam.git"
+  },
+  "keywords": [
+    "visual",
+    "novel",
+    "game",
+    "depression"
+  ],
+  "author": "DarkGlasses Dev Team",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jauntyjocularjay/DarkGlassesJam/issues"
+  },
+  "homepage": "https://github.com/jauntyjocularjay/DarkGlassesJam#readme"
+}
