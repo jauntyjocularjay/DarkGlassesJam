@@ -76,7 +76,7 @@ class DivSample {
         this.div = new Div(classList, id)
         this.element = this.div.element
         this.p = new P()
-        this.text = new Span('Sample text!!!1!!!ONE!!!')
+        this.text = new Span('Sample text!!!1!!!ONE!!!', ['choice'])
         this.p.element.appendChild(this.text.element)
         this.element.appendChild(this.p.element)
         document.querySelector('body').appendChild(this.element)
@@ -86,16 +86,16 @@ class DivSample {
 const elements = {}
 
 const moodCards = [
-    [css.class.mood0, css.class.emboss],
-    [css.class.mood1, css.class.emboss],
-    [css.class.mood2, css.class.emboss],
-    [css.class.mood3, css.class.emboss],
-    [css.class.mood4, css.class.emboss],
-    [css.class.mood5, css.class.emboss],
-    [css.class.mood6, css.class.emboss],
-    [css.class.mood7, css.class.emboss],
-    [css.class.mood8, css.class.emboss],
-    [css.class.mood9, css.class.emboss],
+    [css.class.mood0, css.class.embossedCard],
+    [css.class.mood1, css.class.embossedCard],
+    [css.class.mood2, css.class.embossedCard],
+    [css.class.mood3, css.class.embossedCard],
+    [css.class.mood4, css.class.embossedCard],
+    [css.class.mood5, css.class.embossedCard],
+    [css.class.mood6, css.class.embossedCard],
+    [css.class.mood7, css.class.embossedCard],
+    [css.class.mood8, css.class.embossedCard],
+    [css.class.mood9, css.class.embossedCard],
 ]
 
 let i = 0

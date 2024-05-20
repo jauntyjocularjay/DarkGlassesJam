@@ -48,15 +48,24 @@
     color: #000000;
 }
 
-.emboss {
+.embossedCard {
     border-radius: 16px;
     padding: 2px 16px 4px 16px;
-    margin: 16px auto;
+    margin: 16px auto !important;
     box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
 }
 
+span.choice {
+    cursor: pointer;
+}
+
+span.disabled {
+    color: #999999;
+    cursor: not-allowed;
+}
+
 @media screen and (width > 544px) {
-    .emboss {
+    .embossedCard {
         width: 512px;
     }
 }
