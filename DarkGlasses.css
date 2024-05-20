@@ -50,7 +50,7 @@
 
 .card {
     border-radius: 16px;
-    padding: 4px;
+    padding: 2px 16px 4px 16px;
     margin: 4px;
     box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
 }

@@ -66,12 +66,6 @@ import {
 } from './vjsc/vanilla.mjs'
 
 const css = {
-    tags: {
-        html: 'html',
-        div: 'div',
-        ul: 'ul',
-        ol: 'ol',
-    },
     class: {
         mood0: 'mood0',
         mood1: 'mood1',

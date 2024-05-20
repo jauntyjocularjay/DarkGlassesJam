@@ -83,31 +83,27 @@ class DivSample {
     }
 }
 
-const mood9 = new DivSample([css.class.mood9, css.class.card], 'mood9')
-const mood8 = new DivSample([css.class.mood8, css.class.card], 'mood8')
-const mood7 = new DivSample([css.class.mood7, css.class.card], 'mood7')
-const mood6 = new DivSample([css.class.mood6, css.class.card], 'mood6')
-const mood5 = new DivSample([css.class.mood5, css.class.card], 'mood5')
-const mood4 = new DivSample([css.class.mood4, css.class.card], 'mood4')
-const mood3 = new DivSample([css.class.mood3, css.class.card], 'mood3')
-const mood2 = new DivSample([css.class.mood2, css.class.card], 'mood2')
-const mood1 = new DivSample([css.class.mood1, css.class.card], 'mood1')
-const mood0 = new DivSample([css.class.mood0, css.class.card], 'mood0')
+const elements = {}
 
+const moodCards = [
+    [css.class.mood0, css.class.card],
+    [css.class.mood1, css.class.card],
+    [css.class.mood2, css.class.card],
+    [css.class.mood3, css.class.card],
+    [css.class.mood4, css.class.card],
+    [css.class.mood5, css.class.card],
+    [css.class.mood6, css.class.card],
+    [css.class.mood7, css.class.card],
+    [css.class.mood8, css.class.card],
+    [css.class.mood9, css.class.card],
+]
 
+let i = 0
 
-
-
-
-
-
-
-
-
-
-
-
-
+moodCards.reverse().forEach(card => {
+    elements[`mood${i}`] = new DivSample(card)
+    i++
+})
 
 
 
