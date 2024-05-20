@@ -66,7 +66,13 @@ import {
 } from './vjsc/vanilla.mjs'
 
 const css = {
-    classes: {
+    tags: {
+        html: 'html',
+        div: 'div',
+        ul: 'ul',
+        ol: 'ol',
+    },
+    class: {
         mood0: 'mood0',
         mood1: 'mood1',
         mood2: 'mood2',
@@ -78,6 +84,12 @@ const css = {
         mood8: 'mood8',
         mood9: 'mood9',
         card: 'card',
+    },
+    id: {
+
+    },
+    keyframe: {
+
     }
 }
 

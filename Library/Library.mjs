@@ -5,7 +5,7 @@ import {
     event,
     unit,
 
-    // Base Classes
+    // Base class
     Selection,
     StyleSheet,
     Listener,
@@ -83,16 +83,16 @@ class DivSample {
     }
 }
 
-const mood9 = new DivSample([css.classes.mood9, css.classes.card], 'mood9')
-const mood8 = new DivSample([css.classes.mood8, css.classes.card], 'mood8')
-const mood7 = new DivSample([css.classes.mood7, css.classes.card], 'mood7')
-const mood6 = new DivSample([css.classes.mood6, css.classes.card], 'mood6')
-const mood5 = new DivSample([css.classes.mood5, css.classes.card], 'mood5')
-const mood4 = new DivSample([css.classes.mood4, css.classes.card], 'mood4')
-const mood3 = new DivSample([css.classes.mood3, css.classes.card], 'mood3')
-const mood2 = new DivSample([css.classes.mood2, css.classes.card], 'mood2')
-const mood1 = new DivSample([css.classes.mood1, css.classes.card], 'mood1')
-const mood0 = new DivSample([css.classes.mood0, css.classes.card], 'mood0')
+const mood9 = new DivSample([css.class.mood9, css.class.card], 'mood9')
+const mood8 = new DivSample([css.class.mood8, css.class.card], 'mood8')
+const mood7 = new DivSample([css.class.mood7, css.class.card], 'mood7')
+const mood6 = new DivSample([css.class.mood6, css.class.card], 'mood6')
+const mood5 = new DivSample([css.class.mood5, css.class.card], 'mood5')
+const mood4 = new DivSample([css.class.mood4, css.class.card], 'mood4')
+const mood3 = new DivSample([css.class.mood3, css.class.card], 'mood3')
+const mood2 = new DivSample([css.class.mood2, css.class.card], 'mood2')
+const mood1 = new DivSample([css.class.mood1, css.class.card], 'mood1')
+const mood0 = new DivSample([css.class.mood0, css.class.card], 'mood0')
 
 
 
