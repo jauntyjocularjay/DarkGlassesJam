@@ -4,6 +4,7 @@ import {
     flex,
     event,
     unit,
+    tag,
 
     // Base class
     Selection,
@@ -65,7 +66,7 @@ import {
     PercentageOutOfRangeError
 } from '../vjsc/vanilla.mjs'
 import {
-    css
+    css,
 } from '../DarkGlasses.mjs'
 
 
@@ -76,10 +77,66 @@ class DivSample {
         this.div = new Div(classList, id)
         this.element = this.div.element
         this.p = new P()
-        this.text = new Span('Sample text!!!1!!!ONE!!!', ['choice'])
+        this.text = new Span('Sample text!!!1!!!ONE!!! ')
         this.p.element.appendChild(this.text.element)
         this.element.appendChild(this.p.element)
         document.querySelector('body').appendChild(this.element)
+    }
+}
+
+const bools = [true, false]
+
+class Choice {
+    constructor(moodInt=9, enabled=true){
+        const choiceClasses = []
+        let span
+
+        if(moodInt === 0){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledDark)
+                : choiceClasses.push(css.class.choice.disabledDark)
+        } else if (moodInt === 1){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledDark)
+                : choiceClasses.push(css.class.choice.disabledDark)
+        } else if(moodInt === 2){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledDark)
+                : choiceClasses.push(css.class.choice.disabledDark)
+        } else if(moodInt === 3){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledDark)
+                : choiceClasses.push(css.class.choice.disabledDark)
+        } else if(moodInt === 4){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledDark)
+                : choiceClasses.push(css.class.choice.disabledDark)
+        } else if(moodInt === 5){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledDark)
+                : choiceClasses.push(css.class.choice.disabledDark)
+        } else if(moodInt === 6){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledLight)
+                : choiceClasses.push(css.class.choice.disabledLight)
+        } else if(moodInt === 7){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledLight)
+                : choiceClasses.push(css.class.choice.disabledLight)
+        } else if(moodInt === 8){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledLight)
+                : choiceClasses.push(css.class.choice.disabledLight)
+        } else if(moodInt === 9){
+            enabled 
+                ? choiceClasses.push(css.class.choice.enabledLight)
+                : choiceClasses.push(css.class.choice.disabledLight)
+        } else {
+            throw new RangeError(`moodInt: ${moodInt} must be an integer between 0 and 9`)
+        }
+
+        span = new Span('choice ',choiceClasses)
+        this.element = span.element
     }
 }
 
@@ -102,6 +159,10 @@ let i = 0
 
 moodCards.reverse().forEach(card => {
     elements[`mood${i}`] = new DivSample(card)
+    const enabledChoice = new Choice(i, true)
+    const disabledChoice = new Choice(i, false)
+    elements[`mood${i}`].element.querySelector(tag.p).appendChild(enabledChoice.element)
+    elements[`mood${i}`].element.querySelector(tag.p).appendChild(disabledChoice.element)
     i++
 })
 

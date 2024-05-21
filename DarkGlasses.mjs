@@ -78,6 +78,12 @@ const css = {
         mood8: 'mood8',
         mood9: 'mood9',
         embossedCard: 'embossedCard',
+        choice: {
+            enabledDark: 'enabledChoiceDark',
+            enabledLight: 'enabledChoiceLight',
+            disabledDark: 'disabledChoiceDark',
+            disabledLight: 'disabledChoiceLight',
+        }
     },
     id: {
 
@@ -88,5 +94,5 @@ const css = {
 }
 
 export {
-    css
+    css,
 }

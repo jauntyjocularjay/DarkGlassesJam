@@ -1,3 +1,4 @@
+
 .mood0 {
     background-color: #333333;
     color: #FFFFFF;
@@ -20,7 +21,7 @@
 
 .mood4 {
     background-color: #909090;
-    color: #FFFFFF;
+    color: #000000;
 }
 
 .mood5 {
@@ -55,12 +56,27 @@
     box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
 }
 
-span.choice {
+span.enabledChoiceLight {
+    text-decoration-line: underline;
+    color: lightblue;
     cursor: pointer;
 }
 
-span.disabled {
-    color: #999999;
+span.enabledChoiceDark {
+    text-decoration-line: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+span.disabledChoiceDark {
+    text-decoration-line: underline;
+    color: #333333;
+    cursor: not-allowed;
+}
+
+span.disabledChoiceLight {
+    text-decoration-line: underline;
+    color: #dddddd;
     cursor: not-allowed;
 }
 
