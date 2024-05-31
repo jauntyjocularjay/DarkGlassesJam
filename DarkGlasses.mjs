@@ -5,7 +5,7 @@ const wrapper = document.querySelector('#wrapper')
 const div = document.createElement('div')
 div.classList.add('splash')
 
-const glasses = document.createElement('Img')
+const glasses = document.createElement('img')
 console.log(glasses)
 glasses.src = './DarkGlasses.jpg'
 glasses.alt = 'Dark Glasses on orange background'
