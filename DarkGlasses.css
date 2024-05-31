@@ -2,25 +2,22 @@ body {
     background-color: black;
 }
 
+
+
 .splash {
-    margin: 0 auto;
+    margin: 0 auto;}
+
+img {
+    width: 512px;
 }
 
 @media screen and (width >= 544px) {
-    .embossedCard {
-        max-width: 512px;
-    }
-
     .splash {
         max-width: 512px;
     }
 }
 
 @media screen and (width < 544px) {
-    .embossedCard {
-        max-width: 256px;
-    }
-
     .splash {
         max-width: 256px;
     }
