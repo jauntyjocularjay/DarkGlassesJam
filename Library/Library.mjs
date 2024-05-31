@@ -67,7 +67,8 @@ import {
 } from '../vjsc/vanilla.mjs'
 import {
     css,
-} from '../DarkGlasses.mjs'
+    CardClassesByMood,
+} from '../UserInterface.mjs'
 
 
 document.querySelector('html').classList.add('mood9')
@@ -138,21 +139,9 @@ class Choice {
 
 const elements = {}
 
-const CardsByMood = [
-    [css.class.mood0, css.class.embossedCard],
-    [css.class.mood1, css.class.embossedCard],
-    [css.class.mood2, css.class.embossedCard],
-    [css.class.mood3, css.class.embossedCard],
-    [css.class.mood4, css.class.embossedCard],
-    [css.class.mood5, css.class.embossedCard],
-    [css.class.mood6, css.class.embossedCard],
-    [css.class.mood7, css.class.embossedCard],
-    [css.class.mood8, css.class.embossedCard],
-]
-
 let i = 0
 
-moodCards.reverse().forEach(card => {
+CardClassesByMood.reverse().forEach(card => {
     elements[`mood${i}`] = new DivSample(card)
     const enabledChoice = new Choice(i, true)
     const disabledChoice = new Choice(i, false)
