@@ -32,12 +32,18 @@ The User Interface will reflect the mood variable in the game, from a scale of 0
 
 The code of the game is not going to be hidden or protected in any way. The game is DRM-free, and although UNLICENSED, people will still be able to look at the code. The tools I will use will be open source for anybody to use. This is something knowledgable players can use to have a better understanding of how the mechanics work, a bit like treating the visual novel as a thought experiment they can run over and over again. A black box recording of possibilities.
 
+## Cast
+
+- Thomas, protagonist
+- Roxie, out of his league
+- Javier, the jock Roxie wants and Thomas' antagonist
+- an honor student who suspects Thomas of 
 
 
 
+## Story
 
-
-
+The story is a bit piqueresque showing episodes of Thomas' life, and how he sees the world differently. 
 
 As the story progresses, we witness the deterioration of hope until he inevitably takes his own life.
 

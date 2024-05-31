@@ -1,55 +1,56 @@
 
-.mood0 {
+
+body.mood0 {
     background-color: #333333;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.mood1 {
+caption.mood0 {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.mood1 {
     background-color: #555555;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.mood2 {
+body.mood2 {
     background-color: #707070;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.mood3 {
+body.mood3 {
     background-color: #777777;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.mood4 {
+body.mood4 {
     background-color: #909090;
     color: #000000;
 }
 
-.mood5 {
+body.mood5 {
     background-color: #999999;
     color: #000000;
 }
 
-.mood6 {
+body.mood6 {
     background-color: #B0B0B0;
     color: #000000;
 }
 
-.mood7 {
-    background-color: #BBBBBB;
+body.mood7 {
+    background-color: #bbbbbb;
     color: #000000;
 }
 
-.mood8 {
-    background-color: #D0D0D0;
+body.mood8 {
+    background-color: #d0d0d0;
     color: #000000;
 }
 
-.mood9 {
-    background-color: #DDDDDD;
-    color: #000000;
-}
-
-.embossedCard {
+caption.embossedCard {
     border-radius: 16px;
     padding: 2px 16px 4px 16px;
     margin: 16px auto !important;

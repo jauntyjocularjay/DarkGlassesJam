@@ -127,10 +127,6 @@ class Choice {
             enabled 
                 ? choiceClasses.push(css.class.choice.enabledLight)
                 : choiceClasses.push(css.class.choice.disabledLight)
-        } else if(moodInt === 9){
-            enabled 
-                ? choiceClasses.push(css.class.choice.enabledLight)
-                : choiceClasses.push(css.class.choice.disabledLight)
         } else {
             throw new RangeError(`moodInt: ${moodInt} must be an integer between 0 and 9`)
         }
@@ -142,7 +138,7 @@ class Choice {
 
 const elements = {}
 
-const moodCards = [
+const CardsByMood = [
     [css.class.mood0, css.class.embossedCard],
     [css.class.mood1, css.class.embossedCard],
     [css.class.mood2, css.class.embossedCard],
@@ -152,7 +148,6 @@ const moodCards = [
     [css.class.mood6, css.class.embossedCard],
     [css.class.mood7, css.class.embossedCard],
     [css.class.mood8, css.class.embossedCard],
-    [css.class.mood9, css.class.embossedCard],
 ]
 
 let i = 0

@@ -65,6 +65,18 @@ import {
     PercentageOutOfRangeError
 } from './vjsc/vanilla.mjs'
 
+const CardByMood = [
+    [css.class.mood0, css.class.embossedCard],
+    [css.class.mood1, css.class.embossedCard],
+    [css.class.mood2, css.class.embossedCard],
+    [css.class.mood3, css.class.embossedCard],
+    [css.class.mood4, css.class.embossedCard],
+    [css.class.mood5, css.class.embossedCard],
+    [css.class.mood6, css.class.embossedCard],
+    [css.class.mood7, css.class.embossedCard],
+    [css.class.mood8, css.class.embossedCard],
+]
+
 const css = {
     class: {
         mood: [
@@ -76,11 +88,7 @@ const css = {
             'mood05',
             'mood06',
             'mood07',
-            'mood08',
-            'mood09',
-            'mood10',
-            'mood11',
-            'mood12'
+            'mood08'
         ],
         embossedCard: 'embossedCard',
         choice: {
