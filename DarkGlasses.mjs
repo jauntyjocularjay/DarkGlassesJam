@@ -1,4 +1,5 @@
 let cheats_enabled = false
+let mood = 8
 
 const wrapper = document.querySelector('#wrapper')
 
@@ -18,3 +19,5 @@ wrapper.appendChild(div)
 function enableCheats(){
     cheats_enabled = true
 }
+
+export { mood }

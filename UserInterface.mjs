@@ -64,8 +64,12 @@ import {
     UnsupportedJSONCSSError,
     PercentageOutOfRangeError
 } from './vjsc/vanilla.mjs'
-
-
+import {
+    Choice,
+} from './Library/components/Choice.mjs'
+import {
+    Slide,
+} from './Library/components/Slide.mjs'
 
 const css = {
     class: {
@@ -177,4 +181,5 @@ export {
 
     css,
     CardClassesByMood,
+    Choice
 }

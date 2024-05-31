@@ -4,9 +4,8 @@ import {
     flex,
     event,
     unit,
-    tag,
 
-    // Base class
+    // Base Classes
     Selection,
     StyleSheet,
     Listener,
@@ -63,19 +62,23 @@ import {
     // JSONCSS
     JSONCSS,
     UnsupportedJSONCSSError,
-    PercentageOutOfRangeError
-} from '../vjsc/vanilla.mjs'
-import {
+    PercentageOutOfRangeError,
+
+    // // DarkGlasses
     css,
     CardClassesByMood,
-} from '../UserInterface.mjs'
+} from '../../UserInterface.mjs'
 
 
 
+class Slide extends Figure {
+    constructor(classlist=[], id=null, img=null, figcaption=null){
+        super(document.createElement('figure'), classlist, id, img, figcaption)
+    }
+}
 
 
 
-
-
-
-
+export {
+    Slide,
+}

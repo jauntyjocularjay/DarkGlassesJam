@@ -1,4 +1,5 @@
 import {
+    // // VanillaJS Components
     // Constants
     display,
     flex,
@@ -90,13 +91,6 @@ class Choice {
     }
 }
 
-class Slide {
-    constructor(){
-        this.figure = new Figure()
-    }
-}
-
 export {
     Choice,
-    Slide,
 }
