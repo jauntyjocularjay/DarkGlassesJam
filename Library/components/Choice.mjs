@@ -73,12 +73,7 @@ import {
 
 
 class Choice extends DivBtn {
-    constructor(textContent='', classList=[], id=null, moodInt=8, enabled=true, light=true){
-        if(moodInt > 8 || moodInt < 0){
-            throw new RangeError('Mood must be an integer between 0 and 8 inclusive.')
-        }
-
-        // [css.class.mood[moodInt]].forEach(clss => classList.push(clss))
+    constructor(textContent='', classList=[], id=null, enabled=true, light=true){
 
         if(enabled && light){
             classList.push(css.class.choice.enabledLight)

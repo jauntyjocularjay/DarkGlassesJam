@@ -77,11 +77,11 @@ import {
 
 
 const wrapper = document.querySelector('#wrapper')
-let slideImg = new SlideImg('', '')
+let slideImg = new SlideImg('', '',[css.class.slide.imgPlaceholder])
 let caption = new Figcaption('caption for the image')
 let choices = [
-    new Choice("Drink", [], 'drink', 6, false),
-    new Choice("Pour", [], 'pour', 7, true)
+    new Choice("Drink", [], 'drink'),
+    new Choice("Pour", [], 'pour', false)
 ]
 let chapterSlide = new Slide([], 'demo-slide', slideImg, caption, choices)
 
