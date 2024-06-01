@@ -39,8 +39,6 @@ The code of the game is not going to be hidden or protected in any way. The game
 - Javier, the jock Roxie wants and Thomas' antagonist
 - an honor student who suspects Thomas of 
 
-
-
 ## Story
 
 The story is a bit piqueresque showing episodes of Thomas' life, and how he sees the world differently. 

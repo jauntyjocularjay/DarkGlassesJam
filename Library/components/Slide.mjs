@@ -92,9 +92,29 @@ class SlideCaption extends Figcaption {
     }
 }
 
+class Choice extends DivBtn {
+    constructor(textContent='', classList=[], id=null, enabled=true, light=true){
+
+        if(enabled && light){
+            classList.push(css.class.choice.enabledLight)
+        } else if(enabled && !light){
+            classList.push(css.class.choice.enabledDark)
+        } else if(!enabled && light){
+            classList.push(css.class.choice.disabledLight)
+        } else if(!enabled && !light){
+            classList.push(css.class.choice.disabledDark)
+        } else {
+            throw new TypeError(`Invalid Boolean; {enabled: ${enabled}}, {light: ${light}} must both be boolean values`)
+        }
+
+        super(textContent, classList, id)
+    }
+}
+
 
 export {
     Slide,
     SlideImg,
     SlideCaption,
+    Choice,
 }

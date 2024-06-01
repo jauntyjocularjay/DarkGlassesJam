@@ -67,8 +67,6 @@ import {
 } from './vjsc/vanilla.mjs'
 import {
     Choice,
-} from './Library/components/Choice.mjs'
-import {
     Slide,
     SlideImg,
     SlideCaption,
@@ -109,17 +107,17 @@ const css = {
     }
 }
 
-const CardClassesByMood = [
-    [css.class.mood[0], css.class.embossedCard],
-    [css.class.mood[1], css.class.embossedCard],
-    [css.class.mood[2], css.class.embossedCard],
-    [css.class.mood[3], css.class.embossedCard],
-    [css.class.mood[4], css.class.embossedCard],
-    [css.class.mood[5], css.class.embossedCard],
-    [css.class.mood[6], css.class.embossedCard],
-    [css.class.mood[7], css.class.embossedCard],
-    [css.class.mood[8], css.class.embossedCard],
-]
+// const CardClassesByMood = [
+//     [css.class.mood[0], css.class.embossedCard],
+//     [css.class.mood[1], css.class.embossedCard],
+//     [css.class.mood[2], css.class.embossedCard],
+//     [css.class.mood[3], css.class.embossedCard],
+//     [css.class.mood[4], css.class.embossedCard],
+//     [css.class.mood[5], css.class.embossedCard],
+//     [css.class.mood[6], css.class.embossedCard],
+//     [css.class.mood[7], css.class.embossedCard],
+//     [css.class.mood[8], css.class.embossedCard],
+// ]
 
 
 export {
@@ -190,7 +188,7 @@ export {
     PercentageOutOfRangeError,
 
     css,
-    CardClassesByMood,
+    // CardClassesByMood,
     Slide,
     SlideImg,
     SlideCaption,

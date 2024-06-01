@@ -67,7 +67,7 @@ import {
 
     // Dark Glasses
     css,
-    CardClassesByMood,
+    // CardClassesByMood,
     Choice,
     Slide,
     SlideImg,
@@ -76,18 +76,21 @@ import {
 
 
 
+let moodInt = 8;
+
+let html = document.querySelector(tag.html)
+html.classList.add(css.class.mood[moodInt])
+
 const wrapper = document.querySelector('#wrapper')
-let slideImg = new SlideImg('', '',[css.class.slide.imgPlaceholder])
+let header = new H2('Header')
+let slideImg = new SlideImg('', 'a broken image link',[css.class.slide.imgPlaceholder])
 let caption = new Figcaption('caption for the image')
 let choices = [
-    new Choice("Drink", [], 'drink'),
-    new Choice("Pour", [], 'pour', false)
+    new Choice("Drink", [], 'drink', true, false),
+    new Choice("Pour", [], 'pour', false, true)
 ]
-let chapterSlide = new Slide([], 'demo-slide', slideImg, caption, choices)
+let chapterSlide = new Slide([], 'demo-slide', header, slideImg, caption, choices)
 
 wrapper.appendChild(chapterSlide.element)
-
-
-
 
 
