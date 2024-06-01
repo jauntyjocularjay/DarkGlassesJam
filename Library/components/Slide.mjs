@@ -66,15 +66,14 @@ import {
 
     // // DarkGlasses
     css,
-    CardClassesByMood,
 } from '../../UserInterface.mjs'
 
 
 
 class Slide extends Figure {
-    constructor(classlist=[], id=null, slideImg=null, slideCaption=null, choices=[]){
+    constructor(classlist=[], id=null, slideHeader=null, slideImg=null, slideCaption=null, choices=[]){
         [css.class.slide.container, css.class.embossedCard].forEach(clss => classlist.push(clss))
-        super(classlist, id, slideImg, slideCaption)
+        super(classlist, id, slideHeader, slideImg, slideCaption)
         choices.forEach(choice => this.element.appendChild(choice.element))
     }
 }
