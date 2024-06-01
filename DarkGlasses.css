@@ -52,33 +52,69 @@
 
 .embossedCard {
     border-radius: 16px;
-    padding: 2px 16px 4px 16px;
+    padding: 2px 16px 4px;
     margin: 16px auto !important;
     box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
 }
 
-span.enabledChoiceLight {
+.slide {
+    width: 512px;
+}
+
+.btn {
+    border-radius: 16px;
+    margin: 4px 8px 6px;
+    padding: 2px 8px 4px;
+    width: 256px;
+}
+
+.enabledLight {
+    background-color: #bbbbbb;
     text-decoration-line: underline;
+    color: darkblue;
+    text-shadow: #ffffff 1px 0 10px;
+    box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
+    cursor: pointer;
+}
+
+.enabledDark {
+    background-color: #bbbbbb;
     color: lightblue;
+    text-decoration-line: underline;
+    text-shadow: #000000 1px 0 10px;
+    box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
     cursor: pointer;
 }
 
-span.enabledChoiceDark {
+.disabledLight {
+    background-color: #444444;
+    color: #bbbbbb;
     text-decoration-line: underline;
-    color: blue;
-    cursor: pointer;
+    text-shadow: #dddddd 1px 0 10px;
+    box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #cccccc;
+    cursor: not-allowed;
 }
 
-span.disabledChoiceDark {
-    text-decoration-line: underline;
+.disabledDark {
+    background-color: #444444;
     color: #333333;
+    text-decoration-line: underline;
+    text-shadow: #000000 1px 0 10px;
+    box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
     cursor: not-allowed;
 }
 
-span.disabledChoiceLight {
-    text-decoration-line: underline;
-    color: #dddddd;
-    cursor: not-allowed;
+.slideImg {
+    width: 480px;
+}
+
+.slideImgPlaceholder {
+    width: 480px;
+    height: 320px; 
+}
+
+.slideCaption {
+    margin: 16px 8px;
 }
 
 .splash {

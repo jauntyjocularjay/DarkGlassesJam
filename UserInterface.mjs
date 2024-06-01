@@ -4,6 +4,7 @@ import {
     flex,
     event,
     unit,
+    tag,
 
     // Base Classes
     Selection,
@@ -69,6 +70,8 @@ import {
 } from './Library/components/Choice.mjs'
 import {
     Slide,
+    SlideImg,
+    SlideCaption,
 } from './Library/components/Slide.mjs'
 
 const css = {
@@ -85,16 +88,22 @@ const css = {
             'mood8'
         ],
         embossedCard: 'embossedCard',
+        btn: 'btn',
         choice: {
-            enabledDark: 'enabledChoiceDark',
-            enabledLight: 'enabledChoiceLight',
-            disabledDark: 'disabledChoiceDark',
-            disabledLight: 'disabledChoiceLight',
+            enabledLight: 'enabledLight',
+            enabledDark: 'enabledDark',
+            disabledLight: 'disabledLight',
+            disabledDark: 'disabledDark',
+        },
+        slide: {
+            container: 'slide',
+            img: 'slideImg',
+            imgPlaceholder: 'slideImgPlaceholder',
+            caption: 'slideCaption',
+            choice: 'slideChoice',
         }
     },
-    id: {
-
-    },
+    id: {},
     keyframe: { // CSS Animations
 
     }
@@ -119,6 +128,7 @@ export {
     flex,
     event,
     unit,
+    tag,
 
     // Base Classes
     Selection,
@@ -181,5 +191,8 @@ export {
 
     css,
     CardClassesByMood,
-    Choice
+    Slide,
+    SlideImg,
+    SlideCaption,
+    Choice,
 }

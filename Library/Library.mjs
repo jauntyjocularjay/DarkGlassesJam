@@ -63,17 +63,29 @@ import {
     // JSONCSS
     JSONCSS,
     UnsupportedJSONCSSError,
-    PercentageOutOfRangeError
-} from '../vjsc/vanilla.mjs'
-import {
+    PercentageOutOfRangeError,
+
+    // Dark Glasses
     css,
     CardClassesByMood,
+    Choice,
+    Slide,
+    SlideImg,
+    SlideCaption,
 } from '../UserInterface.mjs'
 
 
 
+const wrapper = document.querySelector('#wrapper')
+let slideImg = new SlideImg('', '')
+let caption = new Figcaption('caption for the image')
+let choices = [
+    new Choice("Drink", [], 'drink', 6, false),
+    new Choice("Pour", [], 'pour', 7, true)
+]
+let chapterSlide = new Slide([], 'demo-slide', slideImg, caption, choices)
 
-
+wrapper.appendChild(chapterSlide.element)
 
 
 

@@ -72,13 +72,30 @@ import {
 
 
 class Slide extends Figure {
-    constructor(classlist=[], id=null, img=null, figcaption=null){
-        super(document.createElement('figure'), classlist, id, img, figcaption)
+    constructor(classlist=[], id=null, slideImg=null, slideCaption=null, choices=[]){
+        [css.class.slide.container, css.class.embossedCard].forEach(clss => classlist.push(clss))
+        super(classlist, id, slideImg, slideCaption)
+        choices.forEach(choice => this.element.appendChild(choice.element))
+    }
+}
+
+class SlideImg extends Img {
+    constructor(path='', alt='', classList=[], id=''){
+        classList.push(css.class.slide.img)
+        super(path, alt, classList, id)
+    }
+}
+
+class SlideCaption extends Figcaption {
+    constructor(textContent='', classList=[], id=''){
+        classList.push(css.class.slide.caption)
+        super(textContent, classList, id)
     }
 }
 
 
-
 export {
     Slide,
+    SlideImg,
+    SlideCaption,
 }

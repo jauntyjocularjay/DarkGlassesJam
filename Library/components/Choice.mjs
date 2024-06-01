@@ -68,26 +68,31 @@ import {
     // // DarkGlasses
     css,
     CardClassesByMood,
-} from '../UserInterface.mjs'
+} from '../../UserInterface.mjs'
 
-class Choice {
-    constructor(moodInt=9, enabled=true){
-        
-        let span
 
-        if( moodInt > 0 || moodInt < 0 ) {
-            throw new RangeError(`moodInt: ${moodInt} must be an integer between 0 and 9`)
+
+class Choice extends DivBtn {
+    constructor(textContent='', classList=[], id=null, moodInt=8, enabled=true, light=true){
+        if(moodInt > 8 || moodInt < 0){
+            throw new RangeError('Mood must be an integer between 0 and 8 inclusive.')
         }
 
-        choiceClasses.push(mood[moodInt])
+        // [css.class.mood[moodInt]].forEach(clss => classList.push(clss))
 
-        enabled 
-            ? choiceClasses.push(css.class.choice.enabledDark)
-            : choiceClasses.push(css.class.choice.disabledDark)
+        if(enabled && light){
+            classList.push(css.class.choice.enabledLight)
+        } else if(enabled && dark){
+            classList.push(css.class.choice.enabledDark)
+        } else if(!enabled && light){
+            classList.push(css.class.choice.disabledLight)
+        } else if(!enabled && dark){
+            classList.push(css.class.choice.disabledDark)
+        } else {
+            throw new TypeError(`Invalid Boolean; {enabled: ${enabled}}, {light: ${light}} must both be boolean values`)
+        }
 
-
-        span = new Span('choice ', choiceClasses)
-        this.element = span.element
+        super(textContent, classList, id)
     }
 }
 

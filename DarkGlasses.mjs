@@ -11,8 +11,6 @@ glasses.classList.add('splash')
 glasses.src = './DarkGlasses.jpg'
 glasses.alt = 'Dark Glasses on orange background'
 
-
-
 div.appendChild(glasses)
 wrapper.appendChild(div)
 
