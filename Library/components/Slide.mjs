@@ -72,7 +72,7 @@ import {
 
 class Slide extends Figure {
     constructor(classlist=[], id=null, slideHeader=null, slideImg=null, slideCaption=null, choices=[]){
-        [css.class.slide.container, css.class.embossedCard].forEach(clss => classlist.push(clss))
+        [css.class.slide.container, css.class.embossedSlide].forEach(clss => classlist.push(clss))
         super(classlist, id, slideHeader, slideImg, slideCaption)
         choices.forEach(choice => this.element.appendChild(choice.element))
     }
@@ -110,6 +110,7 @@ class Choice extends DivBtn {
         super(textContent, classList, id)
     }
 }
+
 
 
 export {

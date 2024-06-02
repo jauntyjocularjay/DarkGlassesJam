@@ -45,7 +45,7 @@
     color: #000000;
 }
 
-.embossedCard {
+.embossedSlide {
     border-radius: 16px;
     padding: 2px 16px 4px;
     margin: 16px auto !important;
@@ -114,6 +114,23 @@
 
 .slideCaption {
     margin: 16px 8px;
+    width: 100%;
+}
+
+.dialogue {
+    animation: dialogue .5s ease 0s 1 normal none;
+}
+
+@keyframes dialogue {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .splash {

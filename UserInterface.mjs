@@ -85,7 +85,7 @@ const css = {
             'mood7',
             'mood8'
         ],
-        embossedCard: 'embossedCard',
+        embossedSlide: 'embossedSlide',
         btn: 'btn',
         choice: {
             enabledLight: 'enabledLight',
@@ -99,25 +99,15 @@ const css = {
             imgPlaceholder: 'slideImgPlaceholder',
             caption: 'slideCaption',
             choice: 'slideChoice',
-        }
+        },
+        dialogue: 'dialogue',
     },
     id: {},
     keyframe: { // CSS Animations
-
+        dialogue: ''
     }
 }
 
-// const CardClassesByMood = [
-//     [css.class.mood[0], css.class.embossedCard],
-//     [css.class.mood[1], css.class.embossedCard],
-//     [css.class.mood[2], css.class.embossedCard],
-//     [css.class.mood[3], css.class.embossedCard],
-//     [css.class.mood[4], css.class.embossedCard],
-//     [css.class.mood[5], css.class.embossedCard],
-//     [css.class.mood[6], css.class.embossedCard],
-//     [css.class.mood[7], css.class.embossedCard],
-//     [css.class.mood[8], css.class.embossedCard],
-// ]
 
 
 export {
