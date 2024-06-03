@@ -44,6 +44,7 @@ import {
     H6,
     // // Body Text
     P,
+    PSpan,
     Figcaption,
     A,
     Strong,
@@ -72,6 +73,7 @@ import {
     Slide,
     SlideImg,
     SlideCaption,
+    Dialogue,
 } from '../UserInterface.mjs'
 
 
@@ -93,30 +95,39 @@ let chapterSlide = new Slide([], 'demo-slide', header, slideImg, caption, choice
 
 wrapper.appendChild(chapterSlide.element)
 
-const dialogue = {
-    counter: 0,
-    span: [
-        new Span('Sam: Hello',['dialogue']),
-        new Span('Kelly: Hello, how are you?'),
-        new Span(`Sam: I'm doing good`),
-        new Span('Kelly: No, Superman does good. You are doing well.'),
-        new Span('Sam: Thanks, E.B. White.')
-    ]
-}
 
+const dialogyObjArray = [
+    {
+        Thomas: 'Hello',
+        Kelly: 'Hello, how are you?',
+    },
+    {
+        Thomas: `I'm doing good`,
+        Kelly: 'No, Superman does good. You are doing well.',
+    },
+    {
+        Thomas: 'Thanks, E.B. White.'
+    }]
+const dialogue = new Dialogue(chapterSlide, dialogyObjArray)
 
-// caption.listeners.push(new Listener(event.page.load, () => {paintDialogue(caption)}))
-// caption.listeners.push(new Listener(event.element.click, () => {paintDialogue(caption)}))
+// const dialogue = {
+//     counter: 0,
+//     span: [
+//         new Span('Sam: Hello',['dialogue']),
+//         new Span('Kelly: Hello, how are you?'),
+//         new Span(`Sam: I'm doing good`),
+//         new Span('Kelly: No, Superman does good. You are doing well.'),
+//         new Span('Sam: Thanks, E.B. White.')
+//     ]
+// }
 
-function paintDialogue(caption) {
-    if(dialogue.counter < dialogue.span.length){
-        let p = new P()
-        p.element.appendChild(dialogue.span[dialogue.counter].element, ['dialogue'])
-        caption.element.appendChild(p.element)
-        dialogue.counter++
-    }
+// function paintDialogue(caption) {
+//     if(dialogue.counter < dialogue.span.length){
+//         let p = new P()
+//         p.element.appendChild(dialogue.span[dialogue.counter].element, ['dialogue'])
+//         caption.element.appendChild(p.element)
+//         dialogue.counter++
+//     }
 
-}
-
-
-chapterSlide.element.addEventListener('click', () => {paintDialogue(caption)})
+// }
+// chapterSlide.element.addEventListener('click', () => {paintDialogue(caption)})

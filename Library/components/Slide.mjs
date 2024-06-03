@@ -43,6 +43,7 @@ import {
     H6,
     // // Body Text
     P,
+    PSpan,
     Figcaption,
     A,
     Strong,
@@ -72,7 +73,7 @@ import {
 
 class Slide extends Figure {
     constructor(classlist=[], id=null, slideHeader=null, slideImg=null, slideCaption=null, choices=[]){
-        [css.class.slide.container, css.class.embossedSlide].forEach(clss => classlist.push(clss))
+        [css.class.slide.container].forEach(clss => classlist.push(clss))
         super(classlist, id, slideHeader, slideImg, slideCaption)
         choices.forEach(choice => this.element.appendChild(choice.element))
     }
@@ -90,6 +91,32 @@ class SlideCaption extends Figcaption {
         classList.push(css.class.slide.caption)
         super(textContent, classList, id)
     }
+}
+
+class Dialogue {
+    constructor(container=new Slide(), dialogueObjArray=[{character1: '', character2: ''}], classList=[], id=null){
+        console.log('dialogueObj:', dialogueObjArray)
+        this.pspanArray = []
+        this.listener = null
+        const caption = container.element.querySelector('caption')
+    
+        dialogueObjArray.forEach(dialogueObj => {
+            for(const [key, value] of Object.entries(dialogueObj)){
+                this.pspanArray.push(new PSpan(value, [key]))
+            }
+        })
+
+        const listener = new Listener(event.element.click, () => {
+            this.pspanArray.forEach(pspan => {
+                console.log('const caption', caption)
+                caption.appendChild(pspan.element)
+            })
+        })
+
+        container.pushEventListenerObj(listener)
+    }
+
+
 }
 
 class Choice extends DivBtn {
@@ -117,5 +144,6 @@ export {
     Slide,
     SlideImg,
     SlideCaption,
+    Dialogue,
     Choice,
 }

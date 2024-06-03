@@ -44,6 +44,7 @@ import {
     H6,
     // // Body Text
     P,
+    PSpan,
     Figcaption,
     A,
     Strong,
@@ -70,6 +71,7 @@ import {
     Slide,
     SlideImg,
     SlideCaption,
+    Dialogue,
 } from './Library/components/Slide.mjs'
 
 const css = {
@@ -85,7 +87,6 @@ const css = {
             'mood7',
             'mood8'
         ],
-        embossedSlide: 'embossedSlide',
         btn: 'btn',
         choice: {
             enabledLight: 'enabledLight',
@@ -104,7 +105,7 @@ const css = {
     },
     id: {},
     keyframe: { // CSS Animations
-        dialogue: ''
+        dialogue: 'dialogue'
     }
 }
 
@@ -156,6 +157,7 @@ export {
     H6,
     // // Body Text
     P,
+    PSpan,
     Figcaption,
     A,
     Strong,
@@ -182,5 +184,6 @@ export {
     Slide,
     SlideImg,
     SlideCaption,
+    Dialogue,
     Choice,
 }

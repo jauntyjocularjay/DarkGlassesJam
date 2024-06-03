@@ -1,5 +1,4 @@
 
-
 .mood0 {
     background-color: #111111;
     color: #ffffff;
@@ -43,15 +42,6 @@
 .mood8 {
     background-color: #dddddd;
     color: #000000;
-}
-
-.embossedSlide {
-    display: flex;
-    flex-flow: column;
-    border-radius: 16px;
-    padding: 2px 16px 4px;
-    margin: 16px auto !important;
-    box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
 }
 
 .btn {
@@ -100,13 +90,13 @@
     cursor: not-allowed;
 }
 
-.slideCaption {
-    margin: 16px 8px;
-    width: 100%;
-}
-
-.dialogue {
-    animation: dialogue .5s ease 0s 1 normal none;
+.slide {
+    display: flex;
+    flex-flow: column;
+    border-radius: 16px;
+    padding: 2px 16px 4px;
+    margin: 16px auto !important;
+    box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
 }
 
 .slideImgPlaceholder {
@@ -114,26 +104,48 @@
     height: 320px;
 }
 
+.slideCaption {
+    margin: 16px 8px;
+    width: 100%;
+}
+
+.dialogue {
+    animation: dialogue .5s ease 0s 1 normal none;
+    border-radius: 16px;
+}
+
+.Thomas {
+    text-align: left;
+    padding: 0 0 0 16px;
+    background-color: lightsalmon;
+}
+
+.Kelly {
+    text-align: right;
+    padding: 0 16px 0 0;
+    background-color: lightseagreen;
+}
+
 @media screen and (width >= 768px ) {
-    .slide {
+    .slide, .splash {
         width: 640px;
     }
 }
 
 @media screen and (width <= 768px ) {
-    .slide {
+    .slide, .splash {
         width: 512px;
     }
 }
 
 @media screen and (width <= 640px ) {
-    .slide {
+    .slide, .splash {
         width: 384px;
     }
 }
 
 @media screen and (width <= 512px ) {
-    .slide {
+    .slide, .splash {
         width: 256px;
     }
 }
@@ -152,24 +164,4 @@
 
 .splash {
     margin: 0 auto;
-}
-
-@media screen and (width >= 544px) {
-    .embossedCard {
-        max-width: 512px;
-    }
-
-    .splash {
-        max-width: 512px;
-    }
-}
-
-@media screen and (width < 544px) {
-    .embossedCard {
-        max-width: 256px;
-    }
-
-    .splash {
-        max-width: 256px;
-    }
 }
