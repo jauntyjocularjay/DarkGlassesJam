@@ -116,6 +116,8 @@ class Dialogue {
             if(this.i < this.textElementArray.length){
                 this.caption.appendChild(this.textElementArray[this.i].element)
                 this.i++
+                window.scrollBy(0, window.innerHeight);
+
             }
         })
 

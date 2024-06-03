@@ -115,16 +115,16 @@
     text-shadow: 1px 1px 1px #000000;
     border-radius: 16px;
     padding: 2px 16px;
+    margin: 8px 8px 8px 32px;
 }
 
 .Thomas {
     text-align: left;
-    margin: 8px 0 8px 16px;
+    margin: 8px 32px 8px 8px;
     background-color: darksalmon;
 }
 
 .Kelly {
-    margin: 8px 16px 8px 0;
     background-color: darkseagreen;
 }
 
@@ -166,4 +166,33 @@
 
 .splash {
     margin: 0 auto;
+}
+
+
+body {
+    --sb-track-color: #333333;
+    --sb-thumb-color: #000000;
+    --sb-size: 16px;
+}
+  
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 8px;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 8px;
+}
+  
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color:
+            var(--sb-thumb-color)
+            var(--sb-track-color);
+    }
 }
