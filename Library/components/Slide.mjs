@@ -94,23 +94,29 @@ class SlideCaption extends Figcaption {
 }
 
 class Dialogue {
-    constructor(container=new Slide(), dialogueObjArray=[{character1: '', character2: ''}], classList=[], id=null){
-        console.log('dialogueObj:', dialogueObjArray)
-        this.pspanArray = []
+    constructor(container=new Slide(), dialogueObjArray=[{character1: '', character2: ''}], choiceArray=[], classList=[], id=null){
+        // console.log('dialogueObj:', dialogueObjArray)
+        this.textElementArray = []
         this.listener = null
-        const caption = container.element.querySelector('caption')
-    
+        this.caption = container.element.querySelector('caption')
+        this.i = 0
+        
         dialogueObjArray.forEach(dialogueObj => {
             for(const [key, value] of Object.entries(dialogueObj)){
-                this.pspanArray.push(new PSpan(value, [key]))
+                // console.log(`{key: ${key}, value: ${value}}`)
+                const pspan = new PSpan(value, [key, 'dialogue'])
+                // console.log('pSpan:', pSpan)
+                this.textElementArray.push(pspan)
             }
         })
 
+        choiceArray.forEach(choice => this.textElementArray.push(choice))
+
         const listener = new Listener(event.element.click, () => {
-            this.pspanArray.forEach(pspan => {
-                console.log('const caption', caption)
-                caption.appendChild(pspan.element)
-            })
+            if(this.i < this.textElementArray.length){
+                this.caption.appendChild(this.textElementArray[this.i].element)
+                this.i++
+            }
         })
 
         container.pushEventListenerObj(listener)

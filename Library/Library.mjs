@@ -87,16 +87,16 @@ const wrapper = document.querySelector('#wrapper')
 let header = new H2('Day 1')
 let slideImg = new SlideImg('', 'a broken image link',[css.class.slide.imgPlaceholder])
 let caption = new Figcaption()
-let choices = [
+let choiceArray = [
     new Choice("Drink", [], 'drink', true, false),
     new Choice("Pour", [], 'pour', false, true)
 ]
-let chapterSlide = new Slide([], 'demo-slide', header, slideImg, caption, choices)
+let chapterSlide = new Slide([], 'demo-slide', header, slideImg, caption)
 
 wrapper.appendChild(chapterSlide.element)
 
 
-const dialogyObjArray = [
+const dialogueObjArray = [
     {
         Thomas: 'Hello',
         Kelly: 'Hello, how are you?',
@@ -108,7 +108,7 @@ const dialogyObjArray = [
     {
         Thomas: 'Thanks, E.B. White.'
     }]
-const dialogue = new Dialogue(chapterSlide, dialogyObjArray)
+const dialogue = new Dialogue(chapterSlide, dialogueObjArray, choiceArray)
 
 // const dialogue = {
 //     counter: 0,

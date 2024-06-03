@@ -111,19 +111,20 @@
 
 .dialogue {
     animation: dialogue .5s ease 0s 1 normal none;
+    text-shadow: 1px 1px 1px #000000;
     border-radius: 16px;
 }
 
 .Thomas {
     text-align: left;
-    padding: 0 0 0 16px;
-    background-color: lightsalmon;
+    padding: 2px 2px 2px 16px;
+    background-color: darksalmon;
 }
 
 .Kelly {
     text-align: right;
-    padding: 0 16px 0 0;
-    background-color: lightseagreen;
+    padding: 2px 16px 2px 2px;
+    background-color: darkseagreen;
 }
 
 @media screen and (width >= 768px ) {
