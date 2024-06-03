@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "vjsc"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DarkGlasses"
+	}
+}

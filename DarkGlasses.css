@@ -1,22 +1,57 @@
-html {
-    background-color: black;
+.mood0 {
+    background-color: #333333;
+    color: #FFFFFF;
 }
 
-.splash {
-    margin: 0 auto;}
-
-img {
-    width: 512px;
+.mood1 {
+    background-color: #555555;
+    color: #FFFFFF;
 }
 
-@media screen and (width >= 544px) {
-    .splash {
-        max-width: 512px;
-    }
+.mood2 {
+    background-color: #707070;
+    color: #FFFFFF;
 }
 
-@media screen and (width < 544px) {
-    .splash {
-        max-width: 256px;
-    }
+.mood3 {
+    background-color: #777777;
+    color: #FFFFFF;
 }
+
+.mood4 {
+    background-color: #909090;
+    color: #FFFFFF;
+}
+
+.mood5 {
+    background-color: #999999;
+    color: #000000;
+}
+
+.mood6 {
+    background-color: #B0B0B0;
+    color: #000000;
+}
+
+.mood7 {
+    background-color: #BBBBBB;
+    color: #000000;
+}
+
+.mood8 {
+    background-color: #D0D0D0;
+    color: #000000;
+}
+
+.mood9 {
+    background-color: #DDDDDD;
+    color: #000000;
+}
+
+.card {
+    border-radius: 16px;
+    padding: 2px 16px 4px 16px;
+    margin: 4px;
+    box-shadow: 2px 2px 2px #000000, inset 1px 1px 1px #ffffff;
+}
+
