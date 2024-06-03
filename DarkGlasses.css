@@ -111,6 +111,7 @@
 
 .dialogue {
     animation: dialogue .5s ease 0s 1 normal none;
+    text-align: right;
     text-shadow: 1px 1px 1px #000000;
     border-radius: 16px;
     padding: 2px 16px;
@@ -123,7 +124,6 @@
 }
 
 .Kelly {
-    text-align: right;
     margin: 8px 16px 8px 0;
     background-color: darkseagreen;
 }
