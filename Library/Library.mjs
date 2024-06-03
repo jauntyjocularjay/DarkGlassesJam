@@ -4,6 +4,7 @@ import {
     flex,
     event,
     unit,
+    tag,
 
     // Base class
     Selection,
@@ -43,6 +44,7 @@ import {
     H6,
     // // Body Text
     P,
+    PSpan,
     Figcaption,
     A,
     Strong,
@@ -62,52 +64,70 @@ import {
     // JSONCSS
     JSONCSS,
     UnsupportedJSONCSSError,
-    PercentageOutOfRangeError
-} from '../vjsc/vanilla.mjs'
-import {
-    css
-} from '../DarkGlasses.mjs'
+    PercentageOutOfRangeError,
+
+    // Dark Glasses
+    css,
+    // CardClassesByMood,
+    Choice,
+    Slide,
+    SlideImg,
+    SlideCaption,
+    Dialogue,
+} from '../UserInterface.mjs'
 
 
-document.querySelector('html').classList.add('mood9')
 
-class DivSample {
-    constructor(classList=[], id=''){
-        this.div = new Div(classList, id)
-        this.element = this.div.element
-        this.p = new P()
-        this.text = new Span('Sample text!!!1!!!ONE!!!')
-        this.p.element.appendChild(this.text.element)
-        this.element.appendChild(this.p.element)
-        document.querySelector('body').appendChild(this.element)
-    }
-}
+let moodInt = 1;
 
-const elements = {}
+let html = document.querySelector(tag.html)
+html.classList.add(css.class.mood[moodInt])
 
-const moodCards = [
-    [css.class.mood0, css.class.card],
-    [css.class.mood1, css.class.card],
-    [css.class.mood2, css.class.card],
-    [css.class.mood3, css.class.card],
-    [css.class.mood4, css.class.card],
-    [css.class.mood5, css.class.card],
-    [css.class.mood6, css.class.card],
-    [css.class.mood7, css.class.card],
-    [css.class.mood8, css.class.card],
-    [css.class.mood9, css.class.card],
+const wrapper = document.querySelector('#wrapper')
+let header = new H2('Day 1')
+let slideImg = new SlideImg('', 'a broken image link',[css.class.slide.imgPlaceholder])
+let caption = new Figcaption()
+let choiceArray = [
+    new Choice("Drink", [], 'drink', true, false),
+    new Choice("Pour", [], 'pour', false, true)
 ]
+let chapterSlide = new Slide([], 'demo-slide', header, slideImg, caption)
 
-let i = 0
-
-moodCards.reverse().forEach(card => {
-    elements[`mood${i}`] = new DivSample(card)
-    i++
-})
+wrapper.appendChild(chapterSlide.element)
 
 
+const dialogueObjArray = [
+    {
+        Thomas: 'Hello',
+        Kelly: 'Hello, how are you?',
+    },
+    {
+        Thomas: `I'm doing good`,
+        Kelly: 'No, Superman does good. You are doing well.',
+    },
+    {
+        Thomas: 'Thanks, E.B. White.'
+    }]
+const dialogue = new Dialogue(chapterSlide, dialogueObjArray, choiceArray)
 
+// const dialogue = {
+//     counter: 0,
+//     span: [
+//         new Span('Sam: Hello',['dialogue']),
+//         new Span('Kelly: Hello, how are you?'),
+//         new Span(`Sam: I'm doing good`),
+//         new Span('Kelly: No, Superman does good. You are doing well.'),
+//         new Span('Sam: Thanks, E.B. White.')
+//     ]
+// }
 
+// function paintDialogue(caption) {
+//     if(dialogue.counter < dialogue.span.length){
+//         let p = new P()
+//         p.element.appendChild(dialogue.span[dialogue.counter].element, ['dialogue'])
+//         caption.element.appendChild(p.element)
+//         dialogue.counter++
+//     }
 
-
-
+// }
+// chapterSlide.element.addEventListener('click', () => {paintDialogue(caption)})
