@@ -85,7 +85,7 @@ html.classList.add(css.class.mood[moodInt])
 
 const wrapper = document.querySelector('#wrapper')
 let header = new H2('Day 1')
-let slideImg = new SlideImg('', 'a broken image link',[css.class.slide.imgPlaceholder])
+let slideImg = new SlideImg('../DarkGlasses.jpg', 'a broken image link', [css.class.slide.imgPlaceholder])
 let caption = new Figcaption()
 let choiceArray = [
     new Choice("Drink", [], 'drink', true, false),
