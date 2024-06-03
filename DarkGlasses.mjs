@@ -1,92 +1,21 @@
-import {
-    // Constants
-    display,
-    flex,
-    event,
-    unit,
+let cheats_enabled = false
+let mood = 8
 
-    // Base Classes
-    Selection,
-    StyleSheet,
-    Listener,
-    ListenerOnLoad,
-    // FlexBoxClass,
+const wrapper = document.querySelector('#wrapper')
 
-    // Classables
-    // // Containers
-    Img,
-    Div,
-    DivBtn,
-    FlexBox,
-    Figure,
-    Form,
-    Label,
-    // // Input
-    Button,
-    Input,
-    TextArea,
-    Select,
-    Option,
-    // // Format elements
-    Br,
-    //  // External Resource Links
-    Link,
-    Style,
+const div = document.createElement('div')
+div.classList.add('splash')
 
-    // Text Elements
-    // // Headers
-    H1,
-    H2,
-    H3,
-    H4,
-    H5,
-    H6,
-    // // Body Text
-    P,
-    Figcaption,
-    A,
-    Strong,
-    Abbr,
-    Blockquote,
-    Sub,
-    Sup,
-    Span,
-    Text,
-    Code,
-    Pre,
+const glasses = document.createElement('Img')
+glasses.classList.add('splash')
+glasses.src = './DarkGlasses.jpg'
+glasses.alt = 'Dark Glasses on orange background'
 
-    // Functions
-    getStylesheetByFileName,
-    addAdoptedStyleSheet,
+div.appendChild(glasses)
+wrapper.appendChild(div)
 
-    // JSONCSS
-    JSONCSS,
-    UnsupportedJSONCSSError,
-    PercentageOutOfRangeError
-} from './vjsc/vanilla.mjs'
-
-const css = {
-    class: {
-        mood0: 'mood0',
-        mood1: 'mood1',
-        mood2: 'mood2',
-        mood3: 'mood3',
-        mood4: 'mood4',
-        mood5: 'mood5',
-        mood6: 'mood6',
-        mood7: 'mood7',
-        mood8: 'mood8',
-        mood9: 'mood9',
-        card: 'card',
-    },
-    id: {
-
-    },
-    keyframe: {
-
-    }
+function enableCheats(){
+    cheats_enabled = true
 }
 
-export {
-    css
-}
+export { mood }
